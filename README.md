@@ -1,2 +1,2 @@
-# Educa
-Site Escolar para apresentação
+pnpm install
+pnpm dev:front
