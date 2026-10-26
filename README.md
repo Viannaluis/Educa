@@ -1,6 +1,13 @@
 # Educa
 Site escolar para apresentação.
 
+## Execução
+
+```sh
+pnpm install
+pnpm dev:front
+```
+
 ## API demonstrativa
 
 O backend está implementado como Route Handlers do Next.js, dentro de `frontend/app/api`.
