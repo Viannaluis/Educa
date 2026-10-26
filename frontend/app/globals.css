@@ -236,17 +236,25 @@ a {
   display: grid;
   gap: 3px;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 10px;
 }
 
 .role-preview select {
-  border: 0;
-  outline: 0;
-  background: transparent;
+  min-height: 30px;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  outline-color: var(--primary);
+  background: var(--surface-muted);
   color: var(--text);
   cursor: pointer;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
+}
+
+.role-preview select option {
+  background: var(--surface);
+  color: var(--text);
 }
 
 .avatar {
@@ -858,6 +866,7 @@ a {
 .calendar-day {
   position: relative;
   cursor: pointer;
+  transition: background-color 150ms ease, box-shadow 150ms ease, color 150ms ease;
 }
 
 .calendar-day:hover:not(:disabled) {
@@ -870,8 +879,8 @@ a {
 }
 
 .calendar-day.today {
-  background: var(--primary);
-  color: white;
+  box-shadow: inset 0 0 0 1px var(--primary);
+  color: var(--primary);
   font-weight: 700;
 }
 
@@ -885,13 +894,13 @@ a {
   content: "";
 }
 
-.calendar-day.today::after {
+.calendar-day.selected-day.has-event::after {
   background: white;
 }
 
-.calendar-day.selected-day:not(.today) {
-  background: var(--primary-soft);
-  color: var(--primary);
+.calendar-day.selected-day {
+  background: var(--primary);
+  color: white;
   font-weight: 700;
 }
 
